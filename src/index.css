@@ -22,39 +22,45 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 85%;
   display: flex;
   margin: auto;
   margin-top: 3rem;
 }
 
 .formpacients {
-  width: 35%;
+  max-width: 1600px;
+  width: 45%;
 }
 .listpacients {
-  width: 65%;
+  width: 55%;
 }
-.formpacients h2 {
+.formpacients h2,
+.listpacients h2 {
   font-size: 2.2rem;
   font-weight: 500;
   margin-bottom: 30px;
   text-align: center;
 }
 
-.form h3 {
-  font-size: 1.6rem;
+.form h3,
+.listpacients h3 {
+  font-size: 1.4rem;
   font-weight: 700;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
-.form h3 span {
+.form h3 span,
+.listpacients h3 span {
   color: indigo;
 }
 .form {
   display: flex;
   flex-direction: column;
   background: rgba(255, 255, 255, 0.959);
+  border-radius: 40px;
+  width: 100%;
 }
 
 .form label {
@@ -62,7 +68,7 @@ body {
   font-size: 1.4rem;
   font-weight: 500;
   text-transform: uppercase;
-  margin-left: 35px;
+  margin-left: 50px;
 }
 .form__input {
   width: 90%;
@@ -71,12 +77,21 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.2rem;
   margin: 0 auto;
+  border-radius: 5px;
 }
+.form__input::placeholder {
+  padding-left: 10px;
+}
+
 .form textarea {
   width: 90%;
   margin: 0 auto;
   margin-bottom: 50px;
   height: 80px;
+  border-radius: 5px;
+  box-shadow: 8px 8px 6px 1px rgba(0, 0, 0, 0.25);
+  resize: none;
+  font-family: "Roboto", sans-serif;
 }
 
 .form__inputbtn {
@@ -91,4 +106,116 @@ body {
   cursor: pointer;
 }
 
+.listpacients {
+  width: 100%;
+  margin-left: 30px;
+  overflow-y: scroll;
+  height: 100vh;
+}
+.pacient {
+  width: 97%;
+  padding: 30px 0 30px 0;
+  background-color: #fafafa;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.pacient p {
+  font-weight: 700;
+  margin: 0 0 10px 20px;
+}
+
+.pacient p span {
+  font-weight: normal;
+}
+
+.error {
+  width: 80%;
+  padding: 15px 0;
+  background-color: rgba(220, 20, 60, 0.685);
+  color: white;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.buttons_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 15px;
+  width: 200px;
+  margin: 15px 50px 0px 50px;
+  border-radius: 10px;
+  color: white;
+  background-color: indigo;
+  cursor: pointer;
+}
+
+div .btn:nth-child(2) {
+  background-color: crimson;
+}
+
+
+@media screen and (max-width:1480px) {
+  .container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .formpacients {
+    width: 50%;
+  }
+  .listpacients {
+    margin-top: 100px;
+    width: 50%;
+  }
+  .header h2{
+    font-size: 1.6rem;
+  }
+  .formpacients h2,
+.listpacients h2 {
+  font-size: 1.3rem;
+}
+
+.form h3,
+.listpacients h3 {
+  font-size: 1.1rem;
+}
+}
+@media screen and (max-width:1110px) {
+
+  .formpacients {
+    width: 70%;
+  }
+  .listpacients {
+    margin-top: 100px;
+    width: 70%;
+  }
+  .formpacients h2,
+.listpacients h2 {
+  font-size: 2.2rem;
+
+}
+
+.form h3,
+.listpacients h3 {
+  font-size: 1.4rem;
+}
+}
+
+
+@media screen and (max-width:860px) {
+
+  .formpacients {
+    width: 100%;
+  }
+  .listpacients {
+    margin-top: 100px;
+    width: 100%;
+  }
+}
 
